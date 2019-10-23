@@ -13,7 +13,7 @@ import Database.Persist.Postgresql
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $ do
-        toWidgetHead [julios|
+        toWidgetHead [julius|
             function ola(){
                 alert("oi");
             }
@@ -26,7 +26,7 @@ getHomeR = do
             <h1>
                OI MUNDO! 
             
-            <button>
+            <button onclick="ola()">
                OI!
         |]          
     
