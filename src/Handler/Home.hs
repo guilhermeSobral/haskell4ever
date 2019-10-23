@@ -2,6 +2,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeFamilies #-}
 module Handler.Home where
 
@@ -19,13 +20,13 @@ getHomeR = do
         |]
         toWidgetHead [cassius|
             h1
-                color : blue;
+               color : blue;
         |]
         [whamlet|
             <h1>
-                OI MUNDO! 
+               OI MUNDO! 
             
             <button>
-                OI!
+               OI!
         |]          
     
