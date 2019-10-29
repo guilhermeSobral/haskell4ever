@@ -27,7 +27,7 @@ getHomeR = do
             <h1>
                OI MUNDO! 
             
-            <img src=@{StaticR Mimikyu.jpg}>   
+            <img src=@{StaticR Mimikyu_jpg}>   
             
             <button class="btn btn-danger" onclick="ola()">
                OI!
