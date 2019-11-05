@@ -16,18 +16,19 @@ getHomeR = do
         addStylesheet (StaticR css_bootstrap_css)
         toWidgetHead [julius|
             function ola(){
-                alert("oi");
+                alert("ola!");
             }
         |]
+        
         toWidgetHead [cassius|
             h1
                color : blue;
         |]
+        
         [whamlet|
             <h1>
                OI MUNDO!
-            <h1>
-                Upei algo no server!
+            
             
             <img src=@{StaticR mimikyu_jpg}>   
             
