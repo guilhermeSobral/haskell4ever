@@ -43,6 +43,13 @@ getHomeR = do
             <h1>
                OI MUNDO!
             
+            <ul>
+                <li>
+                    <a href=@{Page1R}>
+                        Pagina 1
+                <li>
+                    <a href=@{Page2R}>
+                        Pagina 2
             
             <img src=@{StaticR mimikyu_jpg}>   
             
