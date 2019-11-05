@@ -23,8 +23,10 @@ getProdutoR = do
     defaultLayout $ do
         msg <- getMessage
         [whamlet|
-            <div>
-                ^{msg}
+            $maybe mensa <- msg
+                <div>
+                    ^{mensa}
+                    
             <h1>
                 CADASTRO DE PRODUTO !
             <form method=post action=@{ProdutoR}>
