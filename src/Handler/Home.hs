@@ -25,7 +25,9 @@ getHomeR = do
         |]
         [whamlet|
             <h1>
-               OI MUNDO! 
+               OI MUNDO!
+            <h1>
+                Upei algo no server!
             
             <img src=@{StaticR mimikyu_jpg}>   
             
