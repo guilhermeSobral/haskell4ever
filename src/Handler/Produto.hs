@@ -50,7 +50,8 @@ postProdutoR = do
 getListProdR :: Handler Html
 getListProdR = do 
     produtos <- runDB $ selectList [] [Asc ProdutoNome]
-    $(whamletFile "templates/produtos.hamlet")
+    defaultLayout $ do
+        $(whamletFile "templates/produtos.hamlet")
 
 postApagarProdR :: ProdutoId -> Handler Html
 postApagarProdR pid = do
