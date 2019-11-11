@@ -9,5 +9,5 @@
   
 <script>
   function page1() {
-    alert("Ola da Pagina 1");
+    alert("Ola da Pagina 1!");
   };
