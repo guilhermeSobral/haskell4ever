@@ -6,3 +6,8 @@
   
 <a href=@{HomeR}>
   Voltar
+  
+<script>
+  function page1() {
+    alert("PAGINA1");
+  };
