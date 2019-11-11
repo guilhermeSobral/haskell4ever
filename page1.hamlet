@@ -4,8 +4,9 @@
 <div>
   UMA DIV
   
+<p>
+  UM PARAGRAFO
+  
 <a href=@{HomeR}>
   Voltar
   
-<script>
-  console.log('Ola do Console');
