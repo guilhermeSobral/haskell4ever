@@ -7,3 +7,5 @@
 <a href=@{HomeR}>
   Voltar
   
+<script>
+  console.log('Ola do Console');
