@@ -7,7 +7,3 @@
 <a href=@{HomeR}>
   Voltar
   
-<script>
-  function page1() {
-    alert("Ola da Pagina 1!");
-  };
