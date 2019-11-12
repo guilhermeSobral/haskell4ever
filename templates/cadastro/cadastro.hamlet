@@ -7,7 +7,7 @@
 <div class="form-content">
     <form>
         <div class="form-group">
-            <label for="exampleFormControlInput1">Tituto da Postagem>
+            <label for="exampleFormControlInput1">Tituto da Postagem
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo">
             
     <div class="form-group">
