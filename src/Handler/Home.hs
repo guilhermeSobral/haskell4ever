@@ -33,8 +33,8 @@ getLoginR = do
     defaultLayout $ do
         $(whamletFile "templates/login/login.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
-        toWidgetHead $(luciusFile "templates//login/login.lucius")
-        toWidgetHead $(juliusFile "templates//login/login.julius") 
+        toWidgetHead $(luciusFile "templates/login/login.lucius")
+        toWidgetHead $(juliusFile "templates/login/login.julius") 
 
 getPage1R :: Handler Html
 getPage1R = do
