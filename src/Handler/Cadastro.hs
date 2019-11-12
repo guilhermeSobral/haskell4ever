@@ -4,7 +4,7 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeFamilies #-}
-module Handler.Produto where
+module Handler.Cadastro where
 
 import Import
 --import Network.HTTP.Types.Status
