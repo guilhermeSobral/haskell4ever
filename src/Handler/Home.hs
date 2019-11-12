@@ -12,6 +12,14 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
+getPrincipalR :: Handler Html
+getPrincipalR = do
+    defaultLayout $ do
+        $(whamletFile "templates/principal/home.hamlet")
+        addStylesheet (StaticR css_bootstrap_css)
+        toWidgetHead $(luciusFile "templates/principal/home.lucius")
+        toWidgetHead $(juliusFile "templates/principal/home.julius")
+
 getPage1R :: Handler Html
 getPage1R = do
     defaultLayout $ do
