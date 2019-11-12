@@ -34,15 +34,27 @@ getLoginR = do
                 <input type="submit" value="Cadastrar!">
         |]    
         
-postUsuarioR :: Handler Html
-postUsuarioR = do 
-    ((result,_),_) <- runFormPost formUsu
+postLoginR :: Handler Html
+postLoginR = do 
+    ((result,_),_) <- runFormPost formLogin
     case result of
-        FormSuccess usuario -> do
-            runDB $ insert usuario
-            setMessage [shamlet|
-                <h2>
-                    USUARIO INSERIDO COM SUCESSO !
-            |]
-            redirect UsuarioR
+        FormSuccess (email,senha) -> do
+            usuario <- runDB $ getBy (Unique email)
+            case usuario of
+                Nothing -> do
+                    setMessage [|
+                        <div>
+                            E-mail nao encontrado!
+                    |]
+                    redirect LoginR
+                Just (_, usr) -> do
+                    if (usuarioSenha usr == senha) then do
+                        setSession "_NOME" (usuarioNome usr)
+                        redirect HomeR
+                    else do
+                        setMessage [|
+                        <div>
+                            Senha invalida!
+                    |]
+                    redirect LoginR
         _ -> redirect HomeR         
