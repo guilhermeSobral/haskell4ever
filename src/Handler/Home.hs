@@ -15,8 +15,8 @@ import Text.Julius
 getPrincipalR :: Handler Html
 getPrincipalR = do
     defaultLayout $ do
-        addStylesheet (StaticR css_bootstrap_css)
         $(whamletFile "templates/principal/home.hamlet")
+        addStylesheet (StaticR css_bootstrap_css)
         toWidgetHead $(luciusFile "templates/principal/home.lucius")
         toWidgetHead $(juliusFile "templates/principal/home.julius")
 
