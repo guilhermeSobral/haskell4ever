@@ -1,6 +1,6 @@
-class Page1 {
-    function page1() {
-        alert("PAGINA1");
-    };
-}
+function page1() {
+    alert("PAGINA1");
+};
+   
+
 

@@ -7,11 +7,9 @@
 <p>
   UM PARAGRAFO!
   
-<button onclick="page.page1()">
+<button onclick="page1()">
   TESTE
   
 <a href=@{HomeR}>
   Voltar
   
-<script>
-  let page = new Page1();
