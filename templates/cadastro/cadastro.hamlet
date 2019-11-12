@@ -11,7 +11,7 @@
             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Titulo">
             
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Conteudo da Postagem
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+        <label for="exampleFormControlTextarea1">Conteudo da Postagem>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
         
     <button type="submit" class="btn btn-secondary">Enviar   
