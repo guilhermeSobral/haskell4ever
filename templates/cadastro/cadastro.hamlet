@@ -14,4 +14,4 @@
         <label for="exampleFormControlTextarea1">Conteudo da Postagem
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
         
-    <button type="submit" class="btn btn-secondary">Enviar</button>    
+    <button type="submit" class="btn btn-secondary">Enviar   
