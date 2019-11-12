@@ -13,4 +13,4 @@
 
 /home PrincipalR GET
 /cadastro CadastroR GET
-/login LoginR GET
+/entrar EntrarR GET

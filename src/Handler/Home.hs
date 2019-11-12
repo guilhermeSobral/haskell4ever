@@ -28,8 +28,8 @@ getCadastroR = do
         toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
         toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")
         
-getLoginR :: Handler Html
-getLoginR = do
+getEntrarR :: Handler Html
+getEntrarR = do
     defaultLayout $ do
         $(whamletFile "templates/login/login.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
