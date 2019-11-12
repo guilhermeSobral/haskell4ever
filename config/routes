@@ -12,6 +12,8 @@
 /produto/#ProdutoId/apagar ApagarProdR POST
 
 /cadastro UsuarioR GET POST
+/login LoginR GET POST
+/logout LogoutR POST
 
 /home PrincipalR GET
 /cad CadastroR GET
