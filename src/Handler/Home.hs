@@ -19,14 +19,6 @@ getPrincipalR = do
         addStylesheet (StaticR css_bootstrap_css)
         toWidgetHead $(luciusFile "templates/principal/home.lucius")
         toWidgetHead $(juliusFile "templates/principal/home.julius")
-        
-getCadastroR :: Handler Html
-getCadastroR = do
-    defaultLayout $ do
-        $(whamletFile "templates/cadastro/cadastro.hamlet")
-        addStylesheet (StaticR css_bootstrap_css)
-        toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
-        toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")        
 
 getPage1R :: Handler Html
 getPage1R = do
