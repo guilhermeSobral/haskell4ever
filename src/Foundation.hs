@@ -31,7 +31,7 @@ instance Yesod App where
     isAuthorized _ _ = isUsuario
     
 isUsuario :: Handler AuthResult
-isAuthorized = do
+isUsuario = do
     sess <- lookupSession "_NOME"
     case sess of
         Nothing -> return AuthenticationRequired
