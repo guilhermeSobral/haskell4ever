@@ -12,3 +12,4 @@
 /produto/#ProdutoId/apagar ApagarProdR POST
 
 /home PrincipalR GET
+/cadastro CadastroR GET
