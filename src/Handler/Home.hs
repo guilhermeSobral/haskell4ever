@@ -26,7 +26,15 @@ getCadastroR = do
         $(whamletFile "templates/cadastro/cadastro.hamlet")
         addStylesheet (StaticR css_bootstrap_css)
         toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
-        toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")        
+        toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")
+        
+getLoginR :: Handler Html
+getLoginR = do
+    defaultLayout $ do
+        $(whamletFile "templates/login/login.hamlet")
+        addStylesheet (StaticR css_bootstrap_css)
+        toWidgetHead $(luciusFile "templates//login/login.lucius")
+        toWidgetHead $(juliusFile "templates//login/login.julius") 
 
 getPage1R :: Handler Html
 getPage1R = do
