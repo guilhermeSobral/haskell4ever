@@ -32,7 +32,8 @@ getEntrarR :: Handler Html
 getEntrarR = do
     defaultLayout $ do
         $(whamletFile "templates/login/login.hamlet")
-        addStylesheet (StaticR css_bootstrap_css)
+        --addStylesheet (StaticR css_bootstrap_css)
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead $(luciusFile "templates/login/login.lucius")
         toWidgetHead $(juliusFile "templates/login/login.julius") 
 
