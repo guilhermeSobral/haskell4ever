@@ -42,7 +42,7 @@ postLoginR = do
             usuario <- runDB $ getBy (UniqueEmailAdm email)
             case usuario of
                 Nothing -> do
-                    setMessage [|
+                    setMessage [shamlet|
                         <div>
                             E-mail nao encontrado!
                     |]
