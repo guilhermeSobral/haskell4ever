@@ -19,6 +19,7 @@ h1 {
 }
 
 .btn.btn-secondary {
-    color: black;
+    background-color: black;
+    color: gray;
     float: right;
 }
