@@ -53,8 +53,8 @@ postLoginR = do
                         redirect HomeR
                     else do
                         setMessage [|
-                        <div>
-                            Senha invalida!
+                            <div>
+                                Senha invalida!
                     |]
                     redirect LoginR
         _ -> redirect HomeR
