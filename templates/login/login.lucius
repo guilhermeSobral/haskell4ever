@@ -6,3 +6,19 @@ h1 {
     color: #F5F5F5;
     text-align: center;
 }
+
+.form-content {
+    width: 400px;
+    height: 300px;
+    padding: 50px;
+    display: run-in;
+    border: 1px solid black;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 150px);
+}
+
+.btn.btn-secondary {
+    color: black;
+    float: right;
+}
