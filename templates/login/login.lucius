@@ -18,6 +18,11 @@ h1 {
     left: calc(50% - 150px);
 }
 
+.card {
+    position: relative;
+    background-color: rgba(47, 1, 71, 0.952);
+}
+
 .btn.btn-secondary {
     background-color: black;
     color: gray;
