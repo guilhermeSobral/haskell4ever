@@ -52,7 +52,7 @@ postLoginR = do
                         setSession "_NOME" (usuarioNome usr)
                         redirect HomeR
                     else do
-                        setMessage [|
+                        setMessage [shamlet|
                             <div>
                                 Senha invalida!
                     |]
