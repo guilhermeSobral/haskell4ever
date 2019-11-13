@@ -30,7 +30,8 @@ getLoginR = do
             <h1>
                 LOGIN DE USUARIO !
             <form method=post action=@{LoginR}>
-                ^{widget}
+                <input type="email" value="Email:">
+                <input type="password" value="Senha:">
                 <input type="submit" value="Cadastrar!">
         |]    
         
