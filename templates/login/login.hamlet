@@ -5,7 +5,7 @@
                 Login
                 
 <div class="form-content">
-    <form method=post action=@{EntratR}>
+    <form method=post action=@{EntrarR}>
         <div class="form-group">
             <label for="exampleInputEmail1">Email
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">  
