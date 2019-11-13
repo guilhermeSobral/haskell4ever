@@ -27,7 +27,7 @@ getEntrarR = do
         
 postEntrarR :: Handler Html
 postEntrarR = do 
-    ((result,_),_) <- runFormPost formLogin
+    ((result,_),_) <- runFormPost
     case result of
         FormSuccess ("root@root.com", "root") -> do
             setSession "_NOME" "Root"
