@@ -1,0 +1,59 @@
+body {
+    background-color: rgba(224, 222, 222, 0.979);
+  }
+
+ h1 {
+    color: #F5F5F5;
+    text-align: center;
+  }
+  
+  .card {
+    position: relative;
+    background-color: rgba(47, 1, 71, 0.952);
+  }
+
+
+.form-content {
+    width: 800px;
+    height: 650px;
+    padding: 50px 0;
+    display: flex;
+    border: 1px solid black;
+    position: absolute;
+    top: calc(50% - 325px);
+    left: calc(50% - 400px);
+}
+
+form {
+    padding: 20px;
+}
+
+.form-group {
+    width: 720px;  
+    background-color: rgba(224, 222, 222, 0.979); 
+}
+
+.form-group input {
+    background-color: rgba(240, 240, 240, 0.89);
+    color: rgb(0, 0, 0);
+}
+
+.form-group textarea {
+    height: 350px;
+    background-color: rgba(240, 240, 240, 0.89);
+    color: rgb(0, 0, 0);
+}
+
+.form-group input:focus{
+    background-color: rgba(240, 240, 240, 0.89);
+    color: rgb(0, 0, 0);
+}
+
+.form-group textarea:focus{
+    background-color: rgba(240, 240, 240, 0.89);
+    color: rgb(0, 0, 0);
+}
+
+.btn.btn-secondary {
+    float: right;
+}

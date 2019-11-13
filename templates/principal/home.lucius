@@ -1,3 +1,44 @@
+body {
+  background-color: rgba(224, 222, 222, 0.979);
+}
+
+.card {
+  position: relative;
+  background-color: rgba(47, 1, 71, 0.952);
+}
+
+.card-body h1 {
+  color: #F5F5F5;   
+  position: absolute;
+  top: 15px;
+  left: 85px  
+}
+
+nav {
+  display: inline-block;
+  width: 300px;   
+  padding: 35px;
+  vertical-align: top;
+  position: fixed;
+}
+
+.list-group-item {
+  background-color: rgba(224, 222, 222, 0.432);
+}
+
+.btn.btn-link {
+    color: rgb(31, 30, 30);
+}
+
+.body-content {
+  position: relative;  
+  width: 720px;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+
+
 p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;

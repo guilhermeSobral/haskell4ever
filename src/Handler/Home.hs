@@ -16,7 +16,7 @@ getPrincipalR :: Handler Html
 getPrincipalR = do
     defaultLayout $ do
         $(whamletFile "templates/principal/home.hamlet")
-        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead $(luciusFile "templates/principal/home.lucius")
         toWidgetHead $(juliusFile "templates/principal/home.julius")
         
@@ -24,7 +24,7 @@ getCadastroR :: Handler Html
 getCadastroR = do
     defaultLayout $ do
         $(whamletFile "templates/cadastro/cadastro.hamlet")
-        addStylesheet (StaticR css_bootstrap_css)
+         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
         toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")
         
@@ -32,7 +32,6 @@ getEntrarR :: Handler Html
 getEntrarR = do
     defaultLayout $ do
         $(whamletFile "templates/login/login.hamlet")
-        --addStylesheet (StaticR css_bootstrap_css)
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead $(luciusFile "templates/login/login.lucius")
         toWidgetHead $(juliusFile "templates/login/login.julius") 
