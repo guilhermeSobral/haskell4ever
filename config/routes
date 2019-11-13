@@ -19,4 +19,4 @@
 
 /home PrincipalR GET
 /cad CadastroR GET
-/entrar EntrarR GET
+/entrar EntrarR GET POST
