@@ -27,14 +27,6 @@ getCadastroR = do
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
         toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")
-        
-getEntrarR :: Handler Html
-getEntrarR = do
-    defaultLayout $ do
-        $(whamletFile "templates/login/login.hamlet")
-        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        toWidgetHead $(luciusFile "templates/login/login.lucius")
-        toWidgetHead $(juliusFile "templates/login/login.julius") 
 
 getPage1R :: Handler Html
 getPage1R = do
