@@ -37,7 +37,7 @@ isRoot = do
     case sess of
         Nothing -> return AuthenticationRequired
         Just "Root" -> return Authorized
-        Just _ -> return (Unauthorized)
+        Just _ -> return (Unauthorized "VC NAO E ADMIN")
     
 isUsuario :: Handler AuthResult
 isUsuario = do
