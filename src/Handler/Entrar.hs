@@ -42,7 +42,7 @@ postEntrarR = do
                         <div>
                             E-mail nao encontrado!
                     |]
-                    redirect LoginR
+                    redirect EntrarR
                 Just (Entity _ usr) -> do
                     if (usuarioSenha usr == y) then do
                         setSession "_NOME" (usuarioNome usr)
@@ -52,5 +52,5 @@ postEntrarR = do
                             <div>
                                 Senha invalida!
                     |]
-                    redirect LoginR
+                    redirect EntrarR
         _ -> redirect HomeR        
