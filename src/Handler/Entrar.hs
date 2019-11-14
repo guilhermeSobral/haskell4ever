@@ -34,4 +34,23 @@ postEntrarR = do
         (Login "root@root.com" "root") -> do
             setSession "_NOME" "Root"
             redirect AdminR
+        (Login x y) -> do
+            usuario <- runDB $ getBy (UniqueEmailAdm x)
+            case usuario of
+                Nothing -> do
+                    setMessage [shamlet|
+                        <div>
+                            E-mail nao encontrado!
+                    |]
+                    redirect LoginR
+                Just (Entity _ usr) -> do
+                    if (usuarioSenha usr == y) then do
+                        setSession "_NOME" (usuarioNome usr)
+                        redirect HomeR
+                    else do
+                        setMessage [shamlet|
+                            <div>
+                                Senha invalida!
+                    |]
+                    redirect LoginR
         _ -> redirect HomeR        
