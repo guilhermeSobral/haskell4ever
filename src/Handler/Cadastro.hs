@@ -12,7 +12,7 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-data Postagem = Postagem {
+data Conteudo = Conteudo {
     titulo :: Text,
     conteudo :: Text
 }
@@ -27,7 +27,7 @@ getPostagemR = do
     
 postPostagemR :: Handler Html
 postPostagemR = do
-    result <- runInputPost $ Postagem
+    result <- runInputPost $ Conteudo
         <$> ireq emailField "titulo"
         <*> ireq passwordField "conteudo"
     case result of
