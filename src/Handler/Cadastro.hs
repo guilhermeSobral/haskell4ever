@@ -31,8 +31,8 @@ postPostagemR = do
         <$> ireq emailField "titulo"
         <*> ireq passwordField "conteudo"
     case result of
-        postagem -> do
-            runDB $ insert postagem
+        (Conteudo x y) -> do
+            runDB $ insert (Conteudo x y)
             setMessage [shamlet|
                 <h2>
                     POSTAGEM INSERIDO COM SUCESSO !
