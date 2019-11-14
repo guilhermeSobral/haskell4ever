@@ -32,7 +32,7 @@ postPostagemR = do
         <*> ireq passwordField "conteudo"
     case result of
         (BlogPost x y) -> do
-            runDB $ insert result
+            runDB $ insert (BlogPost)
             setMessage [shamlet|
                 <h2>
                     POSTAGEM INSERIDO COM SUCESSO !
