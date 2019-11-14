@@ -27,14 +27,16 @@ getPostagemR = do
     
 postPostagemR :: Handler Html
 postPostagemR = do
-    postagem <- runInputPost $ Postagem
+    result <- runInputPost $ Postagem
         <$> ireq emailField "titulo"
         <*> ireq passwordField "conteudo"
-    runDB $ insert postagem
-    setMessage [shamlet|
-        <h2>
-            PRODUTO INSERIDO COM SUCESSO !
-    |]
-    redirect ProdutoR
-        
+    case result of
+        (Postagem x y) -> do
+            runDB $ insert result
+            setMessage [shamlet|
+                <h2>
+                    POSTAGEM INSERIDO COM SUCESSO !
+            |]
+            redirect HomeR
+        _ -> redirect HomeR
         
