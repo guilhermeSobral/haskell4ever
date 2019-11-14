@@ -31,7 +31,4 @@ postPostagemR = do
         <$> ireq emailField "titulo"
         <*> ireq textareaField "conteudo"
     runDB $ insert result
-    setMessage [shamlet|
-        <h2>
-            POSTAGEM INSERIDO COM SUCESSO !
-    |]
+    redirect HomeR 
