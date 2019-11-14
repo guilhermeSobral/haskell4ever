@@ -29,14 +29,9 @@ postPostagemR :: Handler Html
 postPostagemR = do
     result <- runInputPost $ Conteudo
         <$> ireq emailField "titulo"
-        <*> ireq passwordField "conteudo"
-    case result of
-        (Conteudo x y) -> do
-            runDB $ insert (Conteudo x y)
-            setMessage [shamlet|
-                <h2>
-                    POSTAGEM INSERIDO COM SUCESSO !
-            |]
-            redirect HomeR
-        _ -> redirect PostagemR
-        
+        <*> ireq textareaField "conteudo"
+    runDB $ insert result
+    setMessage [shamlet|
+        <h2>
+            POSTAGEM INSERIDO COM SUCESSO !
+    |]
