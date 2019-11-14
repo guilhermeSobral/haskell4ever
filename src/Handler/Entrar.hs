@@ -12,10 +12,10 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-formLogin :: Form (Text, Text)
-formLogin = renderBootstrap $ ( , )
-    <$> areq emailField "E-mail: " Nothing
-    <*> areq passwordField "Senha: " Nothing
+data Login = Login {
+    email :: Text,
+    password :: Text
+} deriving Show
     
 getEntrarR :: Handler Html
 getEntrarR = do
@@ -27,7 +27,9 @@ getEntrarR = do
         
 postEntrarR :: Handler Html
 postEntrarR = do 
-    ((result,_),_) <- runFormPost formLogin
+    result <- runInputPost $ Login
+        <$> ireq emailField "email"
+        <*> ireq passwordField "senha"
     case result of
         FormSuccess ("root@root.com", "root") -> do
             setSession "_NOME" "Root"
