@@ -14,7 +14,7 @@ import Text.Julius
 
 data Conteudo = Conteudo {
     titulo :: Text,
-    conteudo :: Text
+    conteudo :: Textarea
 }
 
 getPostagemR :: Handler Html
