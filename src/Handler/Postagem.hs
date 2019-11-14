@@ -12,7 +12,7 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-data Postagem = Postagem {
+data BlogPost = BlogPost {
     titulo :: Text,
     conteudo :: Text
 }
@@ -27,16 +27,16 @@ getPostagemR = do
     
 postPostagemR :: Handler Html
 postPostagemR = do
-    result <- runInputPost $ Postagem
+    result <- runInputPost $ BlogPost
         <$> ireq emailField "titulo"
         <*> ireq passwordField "conteudo"
     case result of
-        (Postagem x y) -> do
+        (BlogPost x y) -> do
             runDB $ insert result
             setMessage [shamlet|
                 <h2>
                     POSTAGEM INSERIDO COM SUCESSO !
             |]
             redirect HomeR
-        _ -> redirect HomeR
+        _ -> redirect PostagemR
         
