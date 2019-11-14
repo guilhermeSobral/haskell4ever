@@ -20,14 +20,6 @@ getPrincipalR = do
         toWidgetHead $(luciusFile "templates/principal/home.lucius")
         toWidgetHead $(juliusFile "templates/principal/home.julius")
         
-getCadastroR :: Handler Html
-getCadastroR = do
-    defaultLayout $ do
-        $(whamletFile "templates/cadastro/cadastro.hamlet")
-        addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
-        toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")
-
 getPage1R :: Handler Html
 getPage1R = do
     defaultLayout $ do

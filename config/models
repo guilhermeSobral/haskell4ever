@@ -4,6 +4,10 @@ Usuario
     senha Text
     UniqueEmailAdm email
     deriving Show
+    
+Postagem
+    titulo Text
+    conteudo Text
 
 Produto
     nome Text

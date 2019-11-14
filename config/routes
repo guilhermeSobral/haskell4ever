@@ -20,3 +20,4 @@
 /home PrincipalR GET
 /cad CadastroR GET
 /entrar EntrarR GET POST
+/postagem PostagemR GET POST
