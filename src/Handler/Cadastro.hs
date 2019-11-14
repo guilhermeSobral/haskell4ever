@@ -25,5 +25,18 @@ getPostagemR = do
         toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
         toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")
     
-
+postPostagemR :: Handler Html
+postPostagemR = do
+    result <- runInputPost $ Postagem
+        <$> ireq emailField "titulo"
+        <*> ireq passwordField "conteudo"
+    case result of
+        (Postagem x y) -> do
+            runDB $ insert (Postagem x y)
+            setMessage [shamlet|
+                <h2>
+                    POSTAGEM INSERIDO COM SUCESSO !
+            |]
+            redirect HomeR
+        _ -> redirect PostagemR
         
