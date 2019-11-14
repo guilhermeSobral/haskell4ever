@@ -30,11 +30,11 @@ postPostagemR = do
     postagem <- runInputPost $ Postagem
         <$> ireq emailField "titulo"
         <*> ireq passwordField "conteudo"
-    postagem -> do
-        runDB $ insert postagem
-        setMessage [shamlet|
-                <h2>
-                    PRODUTO INSERIDO COM SUCESSO !
-            |]
-            redirect ProdutoR
+    runDB $ insert postagem
+    setMessage [shamlet|
+        <h2>
+            PRODUTO INSERIDO COM SUCESSO !
+    |]
+    redirect ProdutoR
+        
         
