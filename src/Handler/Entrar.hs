@@ -31,7 +31,7 @@ postEntrarR = do
         <$> ireq emailField "email"
         <*> ireq passwordField "senha"
     case result of
-        FormSuccess (Login "root@root.com" "root") -> do
+        (Login "root@root.com" "root") -> do
             setSession "_NOME" "Root"
             redirect AdminR
         _ -> redirect HomeR        
