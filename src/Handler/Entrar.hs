@@ -35,7 +35,7 @@ postEntrarR = do
             setSession "_NOME" "Root"
             redirect AdminR
         x -> do
-            usuario <- runDB $ getBy (UniqueEmailAdm email x)
+            usuario <- runDB $ getBy (UniqueEmailAdm (email x))
             case usuario of
                 Nothing -> do
                     setMessage [shamlet|
@@ -44,7 +44,7 @@ postEntrarR = do
                     |]
                     redirect EntrarR
                 Just (Entity _ usr) -> do
-                    if (usuarioSenha usr == password x) then do
+                    if (usuarioSenha usr == (password x)) then do
                         setSession "_NOME" (usuarioNome usr)
                         redirect HomeR
                     else do
