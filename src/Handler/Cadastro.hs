@@ -4,7 +4,7 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE TypeFamilies #-}
-module Handler.Postagem where
+module Handler.Cadastro where
 
 import Import
 --import Network.HTTP.Types.Status
@@ -12,7 +12,7 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-data BlogPost = BlogPost {
+data Postagem = Postagem {
     titulo :: Text,
     conteudo :: Text
 }
@@ -25,18 +25,5 @@ getPostagemR = do
         toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
         toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")
     
-postPostagemR :: Handler Html
-postPostagemR = do
-    result <- runInputPost $ BlogPost
-        <$> ireq emailField "titulo"
-        <*> ireq passwordField "conteudo"
-    case result of
-        postBlog -> do
-            runDB $ insert postBlog
-            setMessage [shamlet|
-                <h2>
-                    POSTAGEM INSERIDO COM SUCESSO !
-            |]
-            redirect HomeR
-        _ -> redirect PostagemR
+
         
