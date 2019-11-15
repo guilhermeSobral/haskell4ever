@@ -24,4 +24,33 @@ getEntrarR = do
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead $(luciusFile "templates/login/login.lucius")
         toWidgetHead $(juliusFile "templates/login/login.julius")
-       
+        
+postEntrarR :: Handler Html
+postEntrarR = do 
+    result <- runInputPost $ Login
+        <$> ireq emailField "email"
+        <*> ireq passwordField "senha"
+    case result of
+        (Login "root@root.com" "root") -> do
+            setSession "_NOME" "Root"
+            redirect AdminR
+        (Login x y) -> do
+            usuario <- runDB $ getBy (UniqueEmailAdm x)
+            case usuario of
+                Nothing -> do
+                    setMessage [shamlet|
+                        <div>
+                            E-mail nao encontrado!
+                    |]
+                    redirect EntrarR
+                Just (Entity _ usr) -> do
+                    if (usuarioSenha usr == y) then do
+                        setSession "_NOME" (usuarioNome usr)
+                        redirect HomeR
+                    else do
+                        setMessage [shamlet|
+                            <div>
+                                Senha invalida!
+                    |]
+                    redirect EntrarR
+        _ -> redirect HomeR        
