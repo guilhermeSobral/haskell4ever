@@ -18,5 +18,5 @@
 /admin AdminR GET
 
 /home PrincipalR GET
-/entrar EntrarR GET POST
+/entrar EntrarR GET
 /postagem PostagemR GET
