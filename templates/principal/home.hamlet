@@ -1,7 +1,8 @@
 <header>
     <div class="card">
         <div class="card-body">
-            <img src=@{StaticR t_jpg}>
+            <a href="haskell4ever/entrar">
+                <img src=@{StaticR t_jpg}>
             <h1 class="card-body-h1">
                 Haskell4Ever
                 
