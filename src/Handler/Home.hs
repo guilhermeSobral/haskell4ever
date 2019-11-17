@@ -15,6 +15,7 @@ import Text.Julius
 
 getHomeR :: Handler Html
 getHomeR = do
+    produtos <- runDB $ selectList [] [Asc ProdutoNome]
     defaultLayout $ do
         $(whamletFile "templates/principal/home.hamlet")
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
