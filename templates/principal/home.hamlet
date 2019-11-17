@@ -12,7 +12,7 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <button type="button" class="btn btn-link" onclick="teste('#{produtoNome produto}')">
-                        #{pid}
+                        @{pid}
 
 <div class="body-content">       
     <div class="grid-content">
