@@ -18,6 +18,26 @@
             <li class="list-group-item">
                 <button type="button" class="btn btn-link">
                     List Comprehension
+<table>
+    <thead>
+        <tr>
+            <th>
+                NOME
+            <th>
+                PRECO
+            <th>
+    
+    <tbody>
+        $forall Entity pid produto <- produtos
+            <tr>
+                <td>
+                    #{produtoNome produto}
+                <td>
+                    #{produtoValor produto}
+                <td>
+                    <form method=post action=@{ApagarProdR pid}>
+                        <input type="submit" value="X">
+                    
                     
 <div class="body-content">       
     <div class="grid-content">
