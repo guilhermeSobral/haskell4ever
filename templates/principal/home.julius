@@ -1,3 +1,5 @@
+let paragrafo = document.QuerySelector('p');
+
 function teste() {
-    alert("teste concluido");
+    paragrafo.innerHTML = 'Olá, eu fui alterado via JS!';
 };
