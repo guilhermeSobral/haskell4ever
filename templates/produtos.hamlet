@@ -16,4 +16,4 @@
                     #{produtoValor produto}
                 <td>
                     <form method=post action=@{ApagarProdR pid}>
-                        <input type="submit" value="X"
+                        <input type="submit" value="X">
