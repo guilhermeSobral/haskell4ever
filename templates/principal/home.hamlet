@@ -11,7 +11,7 @@
         $forall Entity pid produto <- produtos
             <ul class="list-group">
                 <li class="list-group-item">
-                    <button type="button" class="btn btn-link" onclick="teste(pid)">
+                    <button type="button" class="btn btn-link" onclick="teste(#{produtoNome})">
                         #{produtoNome produto}
 
 <div class="body-content">       
