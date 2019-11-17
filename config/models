@@ -7,7 +7,7 @@ Usuario
     
 Postagem
     titulo Text
-    conteudo Text
+    conteudo Textarea
     deriving Show
 
 Produto
