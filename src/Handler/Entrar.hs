@@ -46,11 +46,11 @@ postEntrarR = do
                 Just (Entity _ usr) -> do
                     if (usuarioSenha usr == y) then do
                         setSession "_NOME" (usuarioNome usr)
-                        redirect PrincipalR
+                        redirect HomeR
                     else do
                         setMessage [shamlet|
                             <div>
                                 Senha invalida!
                     |]
                     redirect EntrarR
-        _ -> redirect PrincipalR        
+        _ -> redirect HomeR        
