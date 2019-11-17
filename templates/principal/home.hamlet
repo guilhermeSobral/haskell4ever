@@ -8,11 +8,11 @@
                 
 <nav>
     <div class="lista-de-topicos">
-        $forall Entity produto <- produtos
+        $forall Entity pid produto <- produtos
             <ul class="list-group">
                 <li class="list-group-item">
                     <button type="button" class="btn btn-link" onclick="teste('#{produtoNome produto}')">
-                        #{produtoId produto}
+                        @{pid}
 
 <div class="body-content">       
     <div class="grid-content">

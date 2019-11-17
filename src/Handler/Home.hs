@@ -12,6 +12,14 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
+data Produto = Produto {
+    nome :: Text,
+    valor :: Double
+}
+
+instance ToJSON Coord where
+  toJSON (Produto x y) = object ["x" .= x, "y" .= y]
+
 
 getHomeR :: Handler Html
 getHomeR = do

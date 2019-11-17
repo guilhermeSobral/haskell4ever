@@ -9,6 +9,7 @@
 /listar ListProdR GET
 /produto/#ProdutoId/apagar ApagarProdR POST
 
+
 /cadastro UsuarioR GET POST
 /login LoginR GET POST
 /logout LogoutR POST
