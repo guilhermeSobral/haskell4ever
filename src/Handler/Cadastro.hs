@@ -30,5 +30,5 @@ postPostagemR = do
     postagem <- runInputPost $ Conteudo
         <$> ireq emailField "titulo"
         <*> ireq passwordField "conteudo"
-    runDB $ insert postagem    
+    runDB $ insert (Postagem (titulo postagem) (conteudo postagem))     
     
