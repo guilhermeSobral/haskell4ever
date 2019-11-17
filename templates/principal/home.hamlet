@@ -10,7 +10,7 @@
     <div class="lista-de-topicos">
         <ul class="list-group">
             <li class="list-group-item">
-                <button type="button" class="btn btn-link">
+                <button type="button" class="btn btn-link" onclick="teste()">
                     Indrodução
             <li class="list-group-item">
                 <button type="button" class="btn btn-link">
