@@ -1,5 +1,5 @@
-let paragrafo = document.QuerySelector('p');
+let paragrafo = document.querySelector('p');
 
 function teste() {
-    paragrafo.innerHTML = 'Olá, eu fui alterado via JS!';
-};
+    paragrafo.innerHTML = 'Ola!, eu fui mudado pelo JS!'
+}
