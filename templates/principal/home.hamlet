@@ -8,11 +8,16 @@
                 
 <nav>
     <div class="lista-de-topicos">
-        $forall Entity pid produto <- produtos
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <button type="button" class="btn btn-link" onclick="teste(pid)">
-                        #{produtoNome produto}
+        <ul class="list-group">
+            <li class="list-group-item">
+                <button type="button" class="btn btn-link" onclick="teste()">
+                    Indrodução
+            <li class="list-group-item">
+                <button type="button" class="btn btn-link">
+                    Funções Importantes
+            <li class="list-group-item">
+                <button type="button" class="btn btn-link">
+                    List Comprehension
                     
 <div class="body-content">       
     <div class="grid-content">
