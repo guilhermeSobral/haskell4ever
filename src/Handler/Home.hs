@@ -19,4 +19,5 @@ getHomeR = do
         $(whamletFile "templates/principal/home.hamlet")
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead $(luciusFile "templates/principal/home.lucius")
+        addScriptRemote "https://code.jquery.com/jquery-3.3.1.slim.min.js"
         toWidgetBody $(juliusFile "templates/principal/home.julius")
