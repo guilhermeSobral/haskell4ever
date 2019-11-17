@@ -28,7 +28,7 @@ getPostagemR = do
 postPostagemR :: Handler Html
 postPostagemR = do
     postagem <- runInputPost $ Conteudo
-        <$> ireq emailField "titulo"
-        <*> ireq passwordField "conteudo"
+        <$> ireq textField "titulo"
+        <*> ireq textareaField "conteudo"
     runDB $ insert (Postagem (titulo postagem) (conteudo postagem))     
     
