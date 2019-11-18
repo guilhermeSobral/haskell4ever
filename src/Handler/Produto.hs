@@ -18,7 +18,7 @@ data ProdInfo = ProdInfo {
 }
 
 instance ToJSON ProdInfo where
-    toJSON ProdInfo {..} = object
+    toJSON ProdInfo = object
         [ "name" .= nome
         , "age"  .= valor
         ]
