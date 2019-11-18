@@ -18,10 +18,10 @@ data ProdInfo = ProdInfo {
 }
 
 instance ToJSON Person where
-    toJSON ProdInfo {..} = object [
-        "nome" .= nome,
-        "valor" .= valor
-    ]
+    toJSON Person {..} = object
+        [ "nome" .= nome
+        , "valor"  .= valor
+        ]
 
 formProduto :: Form Produto
 formProduto = renderBootstrap $ Produto
