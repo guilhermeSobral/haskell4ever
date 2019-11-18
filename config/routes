@@ -8,7 +8,7 @@
 /produto ProdutoR GET POST
 /listar ListProdR GET
 /produto/#ProdutoId/apagar ApagarProdR POST
-/prod/#ProdutoId  ProdutoByIdR GET
+/prod/ ProdutoByIdR GET
 
 /cadastro UsuarioR GET POST
 /login LoginR GET POST
