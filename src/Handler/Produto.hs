@@ -72,4 +72,4 @@ postApagarProdR pid = do
     
 getProdutoByIdR :: Handler Value
 getProdutoByIdR = do
-    returnJson $ ProdInfo "Produto A" 9.99
+    returnJson $ (ProdInfo "Produto A" 9.99)
