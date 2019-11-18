@@ -17,8 +17,8 @@ data ProdInfo = ProdInfo {
     valor :: Double
 }
 
-instance ToJSON Person where
-    toJSON Person {..} = object
+instance ToJSON ProdInfo where
+    toJSON ProdInfo {..} = object
         [ "nome" .= nome
         , "valor"  .= valor
         ]
@@ -73,4 +73,4 @@ postApagarProdR pid = do
 getProdutoByIdR ::  ProdutoId -> Handler Value
 getProdutoByIdR  pid = do
     produto <- runDB $ getBy pid
-     returnJson produto
+    returnJson $ ProdInfo (produtoNome produto) (produtoValor produto)
