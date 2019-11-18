@@ -1,6 +1,6 @@
 let paragrafo = document.querySelector('p');
 
-function teste(nome) {
+function teste(id) {
     paragrafo.innerHTML = 'Ola!, eu fui mudado pelo JS!';
-    console.log(nome);
+    console.log(id);
 }
