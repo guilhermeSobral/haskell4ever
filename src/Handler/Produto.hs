@@ -61,5 +61,8 @@ postApagarProdR pid = do
     
 getProdutoByIdR ::  ProdutoId -> Handler Value
 getProdutoByIdR  pid = do
-    produto <- runDB $ getBy (fromSqlKey pid)
-    sendStatusJSON ok200 $ object [ "nome" .= produtoNome produto, "valor" .= produtoValor produto ]
+    produto <- runDB $ getBy pid
+    case produto
+        Nothing -> sendStatusJSON noContent204 emptyObject
+        Just (Entity _ prod) -> sendStatusJSON ok200 $ object [ "nome" .= produtoNome prod, "valor" .=  produtoValor prod]
+    
