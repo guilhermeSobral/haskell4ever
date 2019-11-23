@@ -12,11 +12,6 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-data Conteudo = Conteudo {
-    titulo :: Text,
-    conteudo :: Textarea
-}
-
 getPostagemR :: Handler Html
 getPostagemR = do
     defaultLayout $ do
@@ -27,7 +22,7 @@ getPostagemR = do
         
 postPostagemR :: Handler ()
 postPostagemR = do
-    postagem <- runInputPost $ Conteudo
+    postagem <- runInputPost $ Postagem
        <$> ireq textField "titulo"
        <*> ireq textareaField "conteudo"
     runDB $ insert postagem  
