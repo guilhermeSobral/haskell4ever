@@ -7,7 +7,7 @@ function reqListener () {
 function teste(id) {
 	let xhr = new XMLHttpRequest();
 	xhr.onload = reqListener;
-	xhr.open('GET', 'http://haskell4ever.tk/prod/1');
+	xhr.open('GET', 'http://haskell4ever.tk/prod/2');
 	xhr.send();
     paragrafo.innerHTML = 'Ola!, eu fui mudado pelo JS!';
     console.log(id);
