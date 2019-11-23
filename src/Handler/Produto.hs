@@ -61,5 +61,5 @@ postApagarProdR pid = do
     
 getProdR :: ProdutoId -> Handler Value
 getProdR produtoId = do
-    produto <- runDB $ selectList [ ProdutoId ==. produtoId] []
-     sendStatusJSON ok200 $ object [ "resp" .= produto ]
+    produto <- runDB $ get404 produtoId
+    sendStatusJSON ok200 $ object [ "resp" .= produto ]
