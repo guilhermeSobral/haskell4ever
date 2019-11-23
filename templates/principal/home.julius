@@ -1,6 +1,14 @@
 let paragrafo = document.querySelector('p');
 
+function reqListener () {
+    console.log(this.responseText);
+};
+
 function teste(id) {
+	let xhr = new XMLHttpRequest();
+	xhr.onload = reqListener;
+	xhr.open('GET', 'http://haskell4ever.tk/prod/1', true);
+	xhr.send();
     paragrafo.innerHTML = 'Ola!, eu fui mudado pelo JS!';
     console.log(id);
 }
