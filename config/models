@@ -5,7 +5,7 @@ Usuario
     UniqueEmailAdm email
     deriving Show
     
-Postagem
+Postagem json
     titulo Text
     conteudo Textarea
     deriving Show
