@@ -30,6 +30,6 @@ postPostagemR = do
     postagem <- runInputPost $ Conteudo
        <$> ireq textField "titulo"
        <*> ireq textareaField "conteudo"
-   runDB $ insert postagem  
-   redirect HomeR
+    runDB $ insert postagem  
+    redirect HomeR
     
