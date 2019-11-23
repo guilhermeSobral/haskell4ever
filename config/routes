@@ -6,9 +6,9 @@
 / HomeR GET 
 
 /produto ProdutoR GET POST
+/prod/#ProdutoId ProdR GET
 /listar ListProdR GET
 /produto/#ProdutoId/apagar ApagarProdR POST
-/prod/ ProdutoByIdR GET
 
 /cadastro UsuarioR GET POST
 /login LoginR GET POST
@@ -18,3 +18,5 @@
 
 /entrar EntrarR GET POST
 /postagem PostagemR GET
+
+/ator AtorR GET POST

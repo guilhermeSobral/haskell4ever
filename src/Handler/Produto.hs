@@ -12,17 +12,6 @@ import Database.Persist.Postgresql
 import Text.Lucius
 import Text.Julius
 
-data ProdInfo = ProdInfo {
-    nome :: Text,
-    valor :: Double
-}
-
-instance ToJSON ProdInfo where
-    toJSON ProdInfo = object
-        [ "name" .= nome
-        , "age"  .= valor
-        ]
-
 formProduto :: Form Produto
 formProduto = renderBootstrap $ Produto
     <$> areq textField "Nome: " Nothing
@@ -70,6 +59,7 @@ postApagarProdR pid = do
     runDB $ delete pid
     redirect ListProdR
     
-getProdutoByIdR :: Handler Value
-getProdutoByIdR = do
-    returnJson $ (ProdInfo "Produto A" 9.99)
+getProdR :: ProdutoId -> Handler Value
+getProdR produtoId = do
+    produto <- runDB $ selectList [ ProdutoId ==. pesquisa] []
+     sendStatusJSON ok200 $ object [ "resp" .= produto ]

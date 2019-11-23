@@ -10,9 +10,23 @@ Postagem
     conteudo Textarea
     deriving Show
 
-Produto
+Produto json
     nome Text
     valor Double
     deriving Show
     
+Serie
+    nome Text
+    ano Int
+    pais Text
+    deriving Show
     
+Ator
+    nome Text
+    ano Day
+    deriving Show
+    
+Atua
+    serieid SerieId
+    atorid AtorId
+    ano Int
