@@ -28,6 +28,7 @@ instance Yesod App where
     isAuthorized (StaticR _) _ = return Authorized
     isAuthorized EntrarR _ = return Authorized
     isAuthorized (ProdR _) _ = return Authorized
+    isAuthorized (PostagemIdR _) _ = return Authorized
     isAuthorized AdminR _ = isRoot
     isAuthorized _ _ = isUsuario
     
