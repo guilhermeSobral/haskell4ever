@@ -14,7 +14,7 @@ import Text.Julius
 
 getHomeR :: Handler Html
 getHomeR = do
-    postagens <- runDB $ selectList [] [Asc PostagemTitulo]
+    postagem <- runDB $ selectList [] [Asc PostagemTitulo]
     defaultLayout $ do
         $(whamletFile "templates/principal/home.hamlet")
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
