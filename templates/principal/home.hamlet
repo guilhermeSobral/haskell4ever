@@ -8,11 +8,11 @@
                 
 <nav>
     <div class="lista-de-topicos">
-        $forall Entity pid produto <- produtos
+        $forall Entity pid postagem <- postagens
             <ul class="list-group">
                 <li class="list-group-item">
                     <button type="button" class="btn btn-link" onclick="teste(#{fromSqlKey pid})">
-                        #{produtoNome produto}
+                        #{postagemTitulo postagem}
 
 <div class="body-content">       
     <div class="grid-content">
