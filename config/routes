@@ -18,3 +18,4 @@
 
 /entrar EntrarR GET POST
 /postagem PostagemR GET POST
+/postagem/#PostagemId PostagemIdR GET

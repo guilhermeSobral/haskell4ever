@@ -28,3 +28,8 @@ postPostagemR = do
     runDB $ insert postagem  
     redirect HomeR
     
+getPostagemIdR :: PostagemId -> Handler Value
+getPostagemIdR produtoId = do
+    postagem <- runDB $ get404 produtoId
+    sendStatusJSON ok200 postagem
+    
