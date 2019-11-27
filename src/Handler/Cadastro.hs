@@ -19,6 +19,7 @@ getPostagemR = do
         addStylesheetRemote "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
         toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")
+        addScriptRemote "https://code.jquery.com/jquery-3.4.1.min.js"
         
 postPostagemR :: Handler Html
 postPostagemR = do
