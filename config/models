@@ -7,7 +7,7 @@ Usuario
     
 Postagem json
     titulo Text
-    conteudo Textarea
+    conteudo Text
     deriving Show
 
 Produto json

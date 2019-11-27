@@ -20,7 +20,7 @@ getPostagemR = do
         toWidgetHead $(luciusFile "templates/cadastro/cadastro.lucius")
         toWidgetHead $(juliusFile "templates/cadastro/cadastro.julius")
         
-postPostagemR :: Handler ()
+postPostagemR :: Handler Html
 postPostagemR = do
     postagem <- runInputPost $ Postagem
        <$> ireq textField "titulo"
