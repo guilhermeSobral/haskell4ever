@@ -2,11 +2,9 @@ let paragrafo = document.querySelector('p');
 
 function reqListener () {
 	let response = this.responseText;
-	let conteudo = response.split(':');
-	console.log(conteudo);
-	let texto = conteudo[1].split('"');
-	console.log(texto[1]);
-	paragrafo.innerHTML = texto[1];
+	let conteudo = response.split(':')[1].split('"')[1];
+	console.log(conteudo]);
+	paragrafo.innerHTML = conteudo;
 };
 
 function postagem(id) {
