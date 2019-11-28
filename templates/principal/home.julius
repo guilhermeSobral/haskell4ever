@@ -2,9 +2,7 @@ let paragrafo = document.querySelector('p');
 
 function reqListener () {
 	let response = JSON.parse(this.responseText);
-	console.log(response);
-	let conteudo = response.split(':')[1].split('"')[1];
-	console.log(conteudo);
+	let conteudo = response.conteudo;
 	paragrafo.innerHTML = conteudo;
 };
 
