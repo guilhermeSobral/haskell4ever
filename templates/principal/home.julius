@@ -1,7 +1,9 @@
 let paragrafo = document.querySelector('p');
 
 function reqListener () {
-    console.log(this.responseText);
+	let response = this.responseText;
+	console.log(response.conteudo);
+	paragrafo.innerHTML = 'Ola!, eu fui mudado pelo JS!';
 };
 
 function postagem(id) {
@@ -9,6 +11,4 @@ function postagem(id) {
 	xhr.onload = reqListener;
 	xhr.open('GET', 'http://haskell4ever.tk/postagem/'+id);
 	xhr.send();
-    paragrafo.innerHTML = 'Ola!, eu fui mudado pelo JS!';
-    console.log(id);
 }
