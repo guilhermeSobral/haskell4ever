@@ -3,7 +3,7 @@ let paragrafo = document.querySelector('p');
 function reqListener () {
 	let response = this.responseText;
 	let conteudo = response.split(':')[1].split('"')[1];
-	console.log(conteudo]);
+	console.log(conteudo);
 	paragrafo.innerHTML = conteudo;
 };
 
