@@ -1,8 +1,8 @@
 let paragrafo = document.querySelector('p');
 
 function reqListener () {
-	let response = JSON.stringify(this.responseText);
-	console.log(response);
+	let response = this.responseText;
+	console.log(response.conteudo);
 	paragrafo.innerHTML = 'Ola!, eu fui mudado pelo JS!';
 };
 
