@@ -1,19 +1,9 @@
-let paragrafo = document.querySelector('p');
-
-function reqListener () {
-    console.log(this.responseText);
+function postagem(id) {
+	$.ajax({
+    url: 'haskell4ever/postagem/1',
+    type: 'get',
+    success: function(data) {
+        console.log(data);
+    }
+	});
 };
-
-let xhr = new XMLHttpRequest();
-	xhr.onload = reqListener;
-	xhr.open('GET', 'http://haskell4ever.tk/postagem/1');
-	xhr.send();
-
-function teste(id) {
-	let xhr = new XMLHttpRequest();
-	xhr.onload = reqListener;
-	xhr.open('GET', 'http://haskell4ever.tk/postagem/1');
-	xhr.send();
-    paragrafo.innerHTML = 'Ola!, eu fui mudado pelo JS!';
-    console.log(id);
-}
