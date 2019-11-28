@@ -2,7 +2,10 @@ let paragrafo = document.querySelector('p');
 
 function reqListener () {
 	let response = this.responseText;
-	console.log(response);
+	let conteudo = response.split(':');
+	console.log(conteudo);
+	let texto = conteudo[1].split('"');
+	console.log(texto);
 	paragrafo.innerHTML = 'Ola!, eu fui mudado pelo JS!';
 };
 
