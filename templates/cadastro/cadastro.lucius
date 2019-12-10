@@ -19,7 +19,7 @@ body {
     padding: 50px 0;
     display: flex;
     position: relative;
-    border: 1px solid black;
+    align-content: center;
     top: calc(50% - 325px);
     left: calc(50% - 400px);
 }
