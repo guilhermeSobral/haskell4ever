@@ -76,6 +76,8 @@ getAdminR = do
         <a href=@{HomeR}>
             Pagina Inicial
             
+        <br>
+            
         <a href=@{PostagemR}>
             Cadastro de Postagem    
     |]
