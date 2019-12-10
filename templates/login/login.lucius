@@ -10,7 +10,7 @@ h1 {
 .form-content {
     width: 400px;
     height: 300px;
-    padding: 50px;
+    padding: 50 0px;
     display: flex;
     border: 1px solid black;
     position: absolute;
