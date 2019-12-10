@@ -72,4 +72,9 @@ getAdminR = do
     defaultLayout [whamlet|
         <h1>
             BEM-VINDO MEU REI!
+        <a href=@{HomeR}
+            Pagina Inicial
+            
+        <a href=@{PostagemR}
+            Cadastro de Postagem    
     |]
