@@ -12,6 +12,6 @@
             
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Conteudo da Postagem
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="conteudo">
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Postagem" rows="3" name="conteudo">
         
         <button type="submit" class="btn btn-secondary">Enviar   
