@@ -16,7 +16,7 @@ body {
 .form-content {
     width: 800px;
     height: 650px;
-    padding: 50px;
+    padding: 50px 0;
     display: flex;
     position: relative;
     border: 1px solid black;
