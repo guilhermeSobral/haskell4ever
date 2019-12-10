@@ -10,8 +10,8 @@ h1 {
 .form-content {
     width: 400px;
     height: 300px;
-    padding: 50 0px;
-    display: flex;
+    padding: 50px;
+    display: run-in;
     border: 1px solid black;
     position: absolute;
     top: calc(50% - 150px);
