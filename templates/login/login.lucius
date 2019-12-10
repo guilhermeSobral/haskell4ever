@@ -10,11 +10,10 @@ h1 {
 .form-content {
     width: 400px;
     height: 300px;
-    padding: 5px;
-    align-content: center;
+    padding: 50px;
     display: flex;
     border: 1px solid black;
-    position: relative;
+    position: absolute;
     top: calc(50% - 150px);
     left: calc(50% - 200px);
 }
