@@ -13,9 +13,9 @@ h1 {
     padding: 50px;
     display: run-in;
     border: 1px solid black;
-    position: absolute;
-    top: calc(50% - 200px);
-    left: calc(50% - 150px);
+    position: relative;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
 }
 
 .card {
